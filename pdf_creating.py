@@ -101,9 +101,7 @@ class PDF:
         
 
 
-patient = ['Ozan Bozyel','20209529638','22','Male','90']
 
-vol = ['2400','250']
 
 kk = PDF(patient_info = patient ,volums=vol,path = 'C:/Users/Ozan/Desktop/ID_001/',logo = 'C:/Users/Ozan/Desktop/univlogo.jpg').Report()
 
