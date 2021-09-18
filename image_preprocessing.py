@@ -55,7 +55,7 @@ class Path_Loader_Label_Encoder:
         except AttributeError:
             return print('There is a lack of information in the file..')
         
-        
+        orjinal_img = []
         background = np.zeros((512,512,3),dtype= np.uint8)
         for i in range(n):
             dicom = pydicom.read_file(dicom_file_path[i])
@@ -85,7 +85,9 @@ class Path_Loader_Label_Encoder:
             CLAHE_img = cv2.cvtColor(updated_lab_img2, cv2.COLOR_LAB2BGR)
             CLAHE_Path = self.path + 'Images/file_' + str(i) + '.jpg'
             cv2.imwrite(CLAHE_Path, CLAHE_img)
+            orjinal_img.append(CLAHE_img)
             
+        orjinal_img = np.array(orjinal_img)
         
         images = []
         for i in range(n):
@@ -96,8 +98,21 @@ class Path_Loader_Label_Encoder:
             images.append(prediction_image_end)
             
         prediction_images = np.array(images)
-
-        return prediction_images
+        
+        name= dc.PatientName
+        age = dc.PatientAge
+        sex = dc.PatientSex
+        weight = round(dc.PatientWeight,2)
+        tc = '11111111111'
+        patient = []
+        patient.append(name)
+        patient.append(tc)
+        patient.append(age)
+        patient.append(sex)
+        patient.append(weight)
+        area = dc.PixelSpacing
+        vol = area[0] * area[1] * dc.SliceThickness
+        return orjinal_img,prediction_images,patient,vol
    
 
 
