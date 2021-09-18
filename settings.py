@@ -5,7 +5,7 @@ Created on Tue Sep 14 09:53:43 2021
 @author: Ozan
 """
 H5_FILE_PATH_UNET = 'C:/Users/Ozan/Desktop/UNET_15_EPOCHS.h5'
-
+LOGO = 'C:/Users/Ozan/Desktop/univlogo.jpg'
 DICE_SMOOTH = 1
 LEARNING_RATE = 0.0001
 PRINT =True
@@ -17,7 +17,7 @@ IMG_HEIGHT=128
 IMG_WIDTH=128
 IMG_CHANNELS=1
 n_classes=6
-
+REPORT = True
 
 
 
