@@ -56,23 +56,19 @@ class Volume_Calculation:
         
         image = Sort.iloc[0][0]
         t_mask = Sort.iloc[0][1]
-        kk = b_volume + t_volume
+        brain_vol = b_volume + t_volume
         if self.report:
-            return image,t_mask,t_volume,b_volume,kk,Sort
+            return image,t_mask,t_volume,brain_vol
         else:
             print('Total tumor volume: ',t_volume)
-            print('Total brain volume: ',(b_volume+t_volume))
+            print('Total brain volume: ',brain_vol)
             pass
         
             
             
             
         
-img = np.load('C:/Users/Ozan/Desktop/img.npy')        
-mask = np.load('C:/Users/Ozan/Desktop/mask.npy')   
-vol = 2.36328125
-p = False
-ozan = Volume_Calculation(img,mask,vol,p).Calculation()
+
 
 
 
