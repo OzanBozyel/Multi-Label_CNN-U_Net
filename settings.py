@@ -8,7 +8,7 @@ H5_FILE_PATH_UNET = 'C:/Users/Ozan/Desktop/UNET_15_EPOCHS.h5'
 LOGO = 'C:/Users/Ozan/Desktop/univlogo.jpg'
 DICE_SMOOTH = 1
 LEARNING_RATE = 0.0001
-PRINT =True
+PRINT =False
 FEATURES_MAP=16
 USE_DROPOUT = True
 DROPOUT_RATE = 0.1
@@ -19,7 +19,7 @@ IMG_CHANNELS=1
 n_classes=6
 REPORT = True
 
-
+OUTPUT_FORMAT = '.jpg'
 
 
 
