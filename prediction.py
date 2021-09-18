@@ -19,7 +19,7 @@ class Prediction:
         prediction_all_images = []
         pre_model = MODEL().U_NET()
         pre_model = load_model(self.h5_file_path)
-        for i in range(len(self.images.shape[0])):
+        for i in range(self.images.shape[0]):
             img_prediction = pre_model.predict(self.images[i])
             predicted_img = np.argmax(img_prediction,axis=3)[0,:,:]
             prediction_all_images.append(predicted_img)
