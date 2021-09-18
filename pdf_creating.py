@@ -22,14 +22,14 @@ class PDF:
         self.volums = volums
     
     def Report(self):
-        name = self.patient_info[0]
-        tc = self.patient_info[1]
-        age = self.patient_info[2]
-        sex = self.patient_info[3]
-        weight = self.patient_info[4]
+        name = str(self.patient_info[0])
+        tc = str(self.patient_info[1])
+        age = str(self.patient_info[2])
+        sex = str(self.patient_info[3])
+        weight = str(self.patient_info[4])
         
-        b_vol = self.volums[0] + 'cm3'
-        t_vol = self.volums[1] + 'cm3'
+        b_vol = str(self.volums[0]) + 'cm3'
+        t_vol = str(self.volums[1]) + 'cm3'
         
         pdf_path = self.path + 'Radyoloji_Raporu.pdf'
         pdf = canvas.Canvas(pdf_path, pagesize=A4)
