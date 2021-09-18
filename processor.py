@@ -24,10 +24,10 @@ class procedure:
         
         pred = Prediction(images=pre_img).Predict()
         
-        calculation = Volume_Calculation(orjinal_images_array=orj_img, mask_array=pred, volume=vol).Calculation()
+        calculation = Volume_Calculation(orjinal_images_array=orj_img, mask_array=pred, volume=vol,paths=self.path).Calculation()
         
         if settings.REPORT:
-            cal_vol = [calculation[2],calculation[3]]
+            cal_vol = [calculation[0],calculation[1]]
             pdf_cre = PDF(patient_info=patient,volums=cal_vol,path=self.path).Report()
         else:
             pass
