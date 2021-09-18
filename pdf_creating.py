@@ -8,10 +8,14 @@ Created on Sat Sep 18 19:17:25 2021
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 import time
-# import settings
+import settings
 
 class PDF:
-    def __init__(self,patient_info,volums,path,logo):
+    def __init__(self,
+                 patient_info,
+                 volums,
+                 path,
+                 logo=settings.LOGO):
         self.patient_info = patient_info
         self.path = path
         self.logo = logo
@@ -103,7 +107,7 @@ class PDF:
 
 
 
-kk = PDF(patient_info = patient ,volums=vol,path = 'C:/Users/Ozan/Desktop/ID_001/',logo = 'C:/Users/Ozan/Desktop/univlogo.jpg').Report()
+
 
 
 
