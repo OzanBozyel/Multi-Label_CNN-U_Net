@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Sep 18 16:12:48 2021
-
 @author: Ozan
 """
 import cv2
@@ -37,21 +34,17 @@ class Volume_Calculation:
             Original_Image.append(self.orjinal_images[i])
             
             tumor_number = round((len(p_mask[p_mask==4])*self.volume*16*0.001))
-            brain_number = round((len(p_mask[p_mask==4])*self.volume*16*0.001))
+            brain_number = round((len(p_mask[p_mask==3])*self.volume*16*0.001))
             
             Total_Tumor_Volume.append(tumor_number)
-            
-            
-            
+               
             tumor_mask = (p_mask==4)*1
             Tumor_Mask.append(tumor_mask)
             
             t_volume = t_volume + tumor_number
             b_volume = b_volume + brain_number
         
-            
-        
-        
+
         df['Original_Image'] = Original_Image
         df['Tumor_Mask'] = Tumor_Mask
         df['Total_Tumor_Volume'] = Total_Tumor_Volume
@@ -79,49 +72,3 @@ class Volume_Calculation:
             print('Total tumor volume: ',t_volume)
             print('Total brain volume: ',brain_vol)
             pass
-        
-            
-            
-            
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
