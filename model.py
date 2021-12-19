@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Sep 16 14:41:56 2021
-
 @author: Ozan
 """
 from keras.models import Model
@@ -11,8 +8,6 @@ from keras.optimizers import Adam
 from keras import backend as K
 import settings
 from tensorflow import keras as K
-
-
 
 class MODEL:
     def __init__(self,
@@ -68,7 +63,6 @@ class MODEL:
         c4=Conv2D(self.features_map*8, **dict_1)(p3)
         if self.use_dropout:
             c4 = K.layers.SpatialDropout2D(round(self.dropout_rate*3,2))(c4)
-        c4 = K.layers.SpatialDropout2D(0.2)(c4)
         c4=Conv2D(self.features_map*8, **dict_1)(c4) 
         p4=MaxPooling2D(pool_size=(2,2))(c4)
         
@@ -108,69 +102,3 @@ class MODEL:
         if self.model_print:
             model.summary()
         return model
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
