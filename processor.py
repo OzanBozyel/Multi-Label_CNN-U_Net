@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon Sep 13 19:47:20 2021
-
 @author: Ozan
 """
 from image_preprocessing import Path_Loader_Label_Encoder
@@ -11,8 +8,6 @@ from Volume_Cal import Volume_Calculation
 import settings
 from pdf_creating import PDF
 from Outcome import Outcome
-
-
 
 class procedure:
     def __init__(self,path,formats=None):
@@ -35,53 +30,3 @@ class procedure:
         ending = Outcome(pred, self.path)
         
         pass
-        
-        
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
