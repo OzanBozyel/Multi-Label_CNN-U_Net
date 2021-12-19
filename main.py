@@ -1,32 +1,8 @@
-# -*- coding: utf-8 -*-
 """
-Created on Mon Sep 13 20:13:03 2021
-
-@author: Ozan
+@author:  Ozan Bozyel 
 """
 from processor import procedure
-import model
 
-
-
-
-
-a = procedure(path ='C:/Users/Ozan/Desktop/ID_001/').general_processor()
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Hastanının DICOM dosyalarının olduğu klasörün yolunu giriniz.
+path = ''
+predict = procedure(path).general_processor()
