@@ -1,13 +1,11 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Sep 14 18:27:20 2021
-
 @author: Ozan
 """
 import settings
 from model import MODEL
 from keras.models import load_model
 import numpy as np
+import cv2
 
 class Prediction:
     def __init__(self,images,
@@ -27,25 +25,3 @@ class Prediction:
             
         return prediction_all_images 
         
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
