@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Thu Sep  9 19:43:05 2021
-
 @author: Ozan
 """
-
 import pydicom
 import numpy as np
 import os
@@ -13,7 +9,6 @@ import random
 import sys
 import cv2
 from keras.utils import normalize
-
 
 Sequances = ['AX FLAIR_longTR', 'FLAIR_reg', 'FLAIR', 'AX FLAIR', 'RAIN_STRYKER/FLAIR' ]
 
@@ -112,9 +107,5 @@ class Path_Loader_Label_Encoder:
         patient.append(weight)
         area = dc.PixelSpacing
         vol = area[0] * area[1] * dc.SliceThickness
+        
         return orjinal_img,prediction_images,patient,vol
-   
-
-
-
-
