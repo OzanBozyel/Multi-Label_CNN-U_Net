@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sat Sep 18 19:17:25 2021
-
 @author: Ozan
 """
-
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 import time
@@ -100,29 +96,3 @@ class PDF:
         pdf.line(160,250,572,250)
 
         return pdf.save()
-        
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
