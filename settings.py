@@ -1,11 +1,8 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Sep 14 09:53:43 2021
-
 @author: Ozan
 """
-H5_FILE_PATH_UNET = 'C:/Users/Ozan/Desktop/UNET_15_EPOCHS.h5'
-LOGO = 'C:/Users/Ozan/Desktop/univlogo.jpg'
+H5_FILE_PATH_UNET = '.H5 File/model.h5'
+LOGO = '.LOGO/univlogo.jpg'
 DICE_SMOOTH = 1
 LEARNING_RATE = 0.0001
 PRINT =False
@@ -20,22 +17,3 @@ n_classes=6
 REPORT = True
 
 OUTPUT_FORMAT = '.jpg'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
